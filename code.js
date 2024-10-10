@@ -63,7 +63,7 @@ function getCurrentPSSectionEnrollments() {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    payload: {
+    payload: JSON.stringify({
       students: {
         student: [
           {
@@ -86,7 +86,7 @@ function getCurrentPSSectionEnrollments() {
           },
         ],
       },
-    },
+    }),
     muteHttpExceptions: true,
   };
 
